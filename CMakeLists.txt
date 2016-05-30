@@ -1,13 +1,10 @@
-cmake_minimum_required(VERSION 2.8.4)
+﻿cmake_minimum_required(VERSION 2.8.4)
 
-#если ругается на -std=c++11 - версия gcc != 4.8
-
-project(qtreportsviewer)
+project(qtreport)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-#обязательно указать CMAKE_PREFIX_PATH "C:/Qt/5/5.5/mingw492_32" к qt5
 if(!CMAKE_PREFIX_PATH)
 message(WARNING "CHECK CMAKE_PREFIX_PATH")
 endif()
@@ -37,8 +34,8 @@ else()
 endif()
 
 
-SET(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/qtreportsviewer)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/qtreportsviewer) 
+SET(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/qtreport)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/qtreport) 
 
 
   include_directories (
@@ -62,6 +59,7 @@ qtreportslib/tags/band.cpp
 qtreportslib/tags/band.hpp 
 qtreportslib/tags/detail.cpp 
 qtreportslib/tags/detail.hpp 
+
 qtreportslib/tags/field.cpp
 qtreportslib/tags/field.hpp
 qtreportslib/tags/querystring.cpp
@@ -76,10 +74,6 @@ qtreportslib/tags/statictext.cpp
 qtreportslib/tags/statictext.hpp
 qtreportslib/tags/textfield.cpp
 qtreportslib/tags/textfield.hpp
-qtreportslib/tags/line.cpp 
-qtreportslib/tags/line.hpp
-qtreportslib/tags/rect.cpp 
-qtreportslib/tags/rect.hpp
 qtreportslib/tags/style.cpp 
 qtreportslib/tags/style.hpp
 qtreportslib/tags/title.cpp 
@@ -90,8 +84,6 @@ qtreportslib/tags/widget.hpp)
 SET (QTRLIB
 qtreportslib/engine.cpp
 qtreportslib/engine.hpp
-qtreportslib/objectsplant.cpp
-qtreportslib/objectsplant.hpp
 qtreportslib/painter.cpp
 qtreportslib/painter.hpp
 qtreportslib/parser.cpp
@@ -99,21 +91,7 @@ qtreportslib/parser.hpp
 qtreportslib/processeddb.cpp
 qtreportslib/processeddb.hpp
 	)
-	
-SET(EXE 
-qtreportsviewer/main.cpp 
-)
 
 add_library ( qtreports SHARED ${TAGS} ${QTRLIB} ${CONVERTERS})
 
 target_link_libraries ( qtreports  ${QT5_LIBRARIES})
-	
-SET(EXE 
-qtreportsviewer/main.cpp 
-)
-	
-add_executable (main ${EXE})
-	
-target_link_libraries ( main qtreports ${QT5_LIBRARIES})
-
-	
