@@ -1,4 +1,5 @@
 #include "report.hpp"
+#include <qdebug.h>
 
 namespace qtreports
 {
@@ -286,7 +287,7 @@ namespace qtreports
         bool Report::isDetailHasGroupFooter(int detailNum, const QString &groupField)
         {
             int groupIndex = getGroupIndexFromField(groupField);
-
+			qDebug() <<" _______________" << groupIndex;
             if(groupIndex == 0) {
                 if(detailNum == getRowCount() - 1)
                     return true;

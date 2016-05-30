@@ -125,6 +125,9 @@
     <ClCompile Include="tags\group.cpp">
       <Filter>Tags</Filter>
     </ClCompile>
+    <ClCompile Include="tags\variable.cpp">
+      <Filter>Tags</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tags\textfield.hpp">
@@ -167,6 +170,9 @@
       <Filter>Tags</Filter>
     </ClInclude>
     <ClInclude Include="tags\textwidget.hpp">
+      <Filter>Tags</Filter>
+    </ClInclude>
+    <ClInclude Include="tags\variable.hpp">
       <Filter>Tags</Filter>
     </ClInclude>
   </ItemGroup>

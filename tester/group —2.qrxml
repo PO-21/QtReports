@@ -12,15 +12,15 @@
   <field name="gr" class="QString" />
   <field name="year" class="QInteger" />
 
-  <group name="year">
+  <group name="gruppa">
     <groupExpression>
-      <![CDATA[$F{year}]]>
+      <![CDATA[$F{gr}]]>
     </groupExpression>
     <groupHeader>
-      <band height="30">
+      <band height="50">
       <textField>
-        <reportElement x="10" y="20" width="250" height="20" />
-		<textFieldExpression class="QInteger"><![CDATA[$F{year}]]></textFieldExpression>
+        <reportElement x="10" y="20" width="250" height="50" />
+		<textFieldExpression class="QString"><![CDATA[$F{gr}]]></textFieldExpression>
       </textField>
       </band>
     </groupHeader>

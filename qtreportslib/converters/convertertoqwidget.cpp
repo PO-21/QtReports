@@ -193,50 +193,68 @@ namespace qtreports
                 }
             }
 
-			///Group header
-			for (auto && group : m_report->getGroups())
+			///Group
+			if (!m_report->getGroups().isEmpty())
 			{
-				auto footer = group->getFooter();
+				auto keys = m_report->getGroups().keys();				
+				int count_gr = keys.count();//Количество всех групп
+				int count = isReport() ? report->getRowCount() : 1;
+
+				auto gr_name = keys[0];//
+				qDebug() << gr_name;
+				qDebug() << count_gr;
+				auto group = m_report->getGroup(gr_name);//Получаю группу по имени
 				auto header = group->getHeader();
-				
-				if (!group->getHeader().isNull())
+				auto footer = group->getFooter();
+				//m_report->reorderByGroups();
+
+				for (int i = 0; i < count; ++i)
+				{
+					///Header
+					if (m_report->isDetailHasGroupHeader(i, m_report->getFieldFromGroupExpression(group->getExpression())) == true)
+					{
+						if (!group->getHeader().isNull())
+						{
+							QWidget * sectionWidget = isLayout() ? addSectionLayout(layout, report->getMargins(), detail->getHeight()) : nullptr;
+							if (!createSection(sectionWidget, header, 0))
+							{
+								return false;
+							}
+						}
+					}
+
+					QWidget * sectionWidget = isLayout() ? addSectionLayout(layout, report->getMargins(), detail->getHeight()) : nullptr;
+					if (!createSection(sectionWidget, detail, i))
+					{
+						return false;
+					}
+
+					///Footer
+					if (m_report->isDetailHasGroupFooter(i, m_report->getFieldFromGroupExpression(group->getExpression())) == true)
+					{
+						if (!group->getFooter().isNull())
+						{
+							QWidget * sectionWidget = isLayout() ? addSectionLayout(layout, report->getMargins(), detail->getHeight()) : nullptr;
+							if (!createSection(sectionWidget, footer, 0))
+							{
+								return false;
+							}
+						}
+					}
+				}///end for
+			}			
+			else
+			{
+				int count = isReport() ? report->getRowCount() : 1;
+				for (int i = 0; i < count; ++i)
 				{
 					QWidget * sectionWidget = isLayout() ? addSectionLayout(layout, report->getMargins(), detail->getHeight()) : nullptr;
-					if (!createSection(sectionWidget, header, 0))
+					if (!createSection(sectionWidget, detail, i))
 					{
 						return false;
 					}
 				}
 			}
-
-
-            int count = isReport() ? report->getRowCount() : 1;
-            for( int i = 0; i < count; ++i )
-            {
-                QWidget * sectionWidget = isLayout() ? addSectionLayout( layout, report->getMargins(), detail->getHeight() ) : nullptr;
-                if( !createSection( sectionWidget, detail, i ) )
-                {
-                    return false;
-                }
-            }
-			///Group footer
-			for (auto && group : m_report->getGroups())
-			{
-				auto footer = group->getFooter();
-				auto header = group->getHeader();
-
-				if (!group->getFooter().isNull())
-				{
-					QWidget * sectionWidget = isLayout() ? addSectionLayout(layout, report->getMargins(), detail->getHeight()) : nullptr;
-					if (!createSection(sectionWidget, footer, 0))
-					{
-						return false;
-					}
-				}
-
-				//group->getFooter();
-			}
-
 
             addEmptySection( layout, report->getMargins() );
             addVerticalBorder( layout, report->getMargins(), report->getBottomMargin() );
@@ -396,37 +414,7 @@ namespace qtreports
                     label->setGeometry( ellipse->getRect() );
                     label->setAlignment( ellipse->getAlignment() );
                 }
-				
-				/*
-				////////
-				//Group *group;
-				for(auto && group : m_report->getGroups())
-				{
-					if (group->getExpression().isEmpty())
-					{
-						m_lastError = "Group \"" + group->getName() + "\" Expression is empty";
-						return false;
-					}
 
-					auto label = new QLabel(frame);
-					QString style = "";
-					if (isLayout())
-					{
-						style += "border: 1px solid gray; ";
-					}
-
-					auto heaade = group->getHeader().data();
-					//auto hhd = gro
-					//label->setText();
-					QString head = m_report->getFieldFromGroupExpression(group->getExpression());//Получаем
-					int h = m_report->getGroupIndexFromField(head);
-					auto nn = m_report->getGroupByIndex(h);
-					m_report->isDetailHasGroupHeader(1, head);
-					auto footer = group->getFooter();
-					auto footer_h = footer.data();
-
-					//label->setText("fadfasdfasd");
-				}*/
             }
 
             return true;

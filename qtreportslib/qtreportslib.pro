@@ -27,6 +27,7 @@ SOURCES += engine.cpp \
     tags/line.cpp \
     tags/rect.cpp \
     tags/ellipse.cpp \
+	tags/variable.cpp \
     tags/image.cpp
 
 HEADERS += engine.hpp \
@@ -51,6 +52,7 @@ HEADERS += engine.hpp \
     tags/line.hpp \
     tags/rect.hpp \
     tags/ellipse.hpp \
+	tags/variable.hpp \
     tags/image.hpp
 	
 QMAKE_CXXFLAGS += -std=c++11
