@@ -45,6 +45,7 @@ namespace qtreports
             m_functions[ "textField" ] = toParseFunc( this, &ParserFromXML::parseTextField );
             m_functions[ "line" ] = toParseFunc( this, &ParserFromXML::parseLine );
             m_functions[ "rect" ] = toParseFunc( this, &ParserFromXML::parseRect );
+			m_functions[ "rectangle" ] = toParseFunc(this, &ParserFromXML::parseRect);
             m_functions[ "ellipse" ] = toParseFunc( this, &ParserFromXML::parseEllipse );
             m_functions[ "image" ] = toParseFunc( this, &ParserFromXML::parseImage );
             m_functions[ "imageExpression" ] = toParseFunc( this, &ParserFromXML::parseImageExpression );

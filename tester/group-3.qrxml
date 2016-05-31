@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report name="sample_report" orientation="Landscape">
+  <style name="Arial_Normal" isDefault="true" fontName="Arial"
+    fontSize="12" pdfFontName="c:\tahoma.ttf" pdfEncoding="Cp1251"
+    isPdfEmbedded="false" />
+	
+	<style name="Red" isDefault="false" fontName="Arial"
+    fontSize="20" fontColor="Red" isBold="true" pdfFontName="c:\tahoma.ttf" pdfEncoding="Cp1251"
+    isPdfEmbedded="false" />
+	
+	<style name="Green" isDefault="false" fontName="Arial"
+    fontSize="10" fontColor="Green" isItalic="true" pdfFontName="c:\tahoma.ttf" pdfEncoding="Cp1251"
+    isPdfEmbedded="false" />
+
+  <queryString>
+    <![CDATA[ select name,gr,year from group1;]]>
+  </queryString>
+
+  <field name="name" class="QString" />
+  <field name="gr" class="QString" />
+  <field name="year" class="QInteger" />
+  
+  <parameter name="God" class="QInteger" />
+  <parameter name="Name_stud" class="QString" />
+
+  <group name="gruppa">
+    <groupExpression>
+      <![CDATA[$F{gr}]]>
+    </groupExpression>
+	
+    <groupHeader>
+      <band height="50">
+      <textField>
+        <reportElement x="5" y="20" width="250" height="50" style="Red" />
+		<textFieldExpression class="QString"><![CDATA[$F{gr}]]></textFieldExpression>
+		<textFieldExpression class="QString"><![CDATA[$P{God}]]></textFieldExpression>
+      </textField>
+      </band>
+    </groupHeader>
+    
+	<groupFooter>
+      <band height="30">
+      <staticText>
+        <reportElement x="10" y="20" width="250" height="20" style="Green" />
+		<textElement textAlignment="Right" textVAlignment="Top" />
+        <text><![CDATA[Подвал!!!!!!!!!Полундра!!!]]></text>
+		<text><![CDATA[$P{Name_stud}]]></text>
+      </staticText>
+      </band>
+	  
+    </groupFooter>
+  </group>
+  
+  <detail>
+    <band height="200">
+      
+	  <rectangle>
+        <reportElement x="0" y="0" width="535" height="200" />
+      </rectangle>
+	  
+	  <textField>
+			<reportElement x="10" y="0" width="120" height="200" />
+			<textFieldExpression class="QInteger"><![CDATA[$F{year}]]></textFieldExpression>
+		</textField>
+
+			<line>
+        <reportElement x="120" y="0" width="1" height="200" />
+			</line>
+      
+	  <textField>
+        <reportElement x="130" y="0" width="140" height="200" />
+        <textFieldExpression class="QString"><![CDATA[$F{name}]]></textFieldExpression>
+      </textField>
+      
+	  <line>
+        <reportElement x="270" y="0" width="1" height="200" />
+      </line>
+      
+	  <textField>
+        <reportElement x="280" y="0" width="140" height="200" />
+        <textFieldExpression class="QString"><![CDATA[$F{gr}]]></textFieldExpression>
+      </textField>
+    
+	</band>
+  </detail>
+
+</report>

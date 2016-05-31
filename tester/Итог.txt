@@ -1,0 +1,26 @@
+GRAPHIC ELEMENTS - нет
+Lines - да
+Rectangles -50/50
+Ellipse - да
+
+Style - 
+fontColor - no
+fontSize - no
+isBold - no
+isItalic - no
+
+Title - ok
+
+Statictext - ok
+
+ReportElement - 90/10
+
+Parameter - непонятно, выводит просто как текст
+
+QueryString - 50/50
+
+Field - 90/10
+
+fieldDescription - no
+
+image
