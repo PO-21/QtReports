@@ -37,49 +37,66 @@ namespace qtreports
             const QString   getClassName() const;
 
             /*! @~russian
-            Устанавливает содержимое <variable>
-            @param[in] data Вектор, содержащие данные <variable>
+            Когда происходит сброс переменной
+            @param[in] resetType значения сброса переменной
             */
-            void            setData( const QVector< QVariant > & data );
+			void			setResetType( const QString & resetType);
 
-            /*! @~russian
-            Возвращает содержимое <variable>
-            @param[in] row Номер строки
-            */
-            QString         getData( int row );
+			/*! @~russian
+			Возвращает атрибут ResetType.
+			*/
+			const QString   getResetType();
 
-            /*! @~russian
-            Возвращает содержимое <variable>. Шаблонный вариант.
-            @param[in] row Номер строки
-            */
-            template< typename T1 >
-            const T1        getData( int row )
-            {
-                return m_data.value( row ).value< T1 >();
-            }
+			/*! @~russian
+			Если ResetType=Group, то на какой группе
+			@param[in] resetGroup имя группы для сброса
+			*/
+			void			setResetGroup(const QString & resetGroup);
 
-            const QVariant getDataVar(int row)
-            {
-                return m_data[row];
-            }
+			/*! @~russian
+			Возвращает атрибут ResetGroup.
+			*/
+			const QString   getResetGroup();
 
-            void setDataVar(int row, const QVariant & value) {
-                m_data[row] = value;
-            }
+			/*! @~russian
+			Когда происходит обновление переменной
+			@param[in] incrementType значения обновления переменной
+			*/
+			void			setIncrementType( const QString & incrementType);
 
-            /*! @~russian
-            Получить количество строк в <variable>
-            */
-            int             getRowCount();
+			/*! @~russian
+			Возвращает атрибут IncrementType.
+			*/
+			const QString	getIncrementType() const;
 
+			/*! @~russian
+			Если RIncrementType=Group, то на какой группе
+			@param[in] incrementGroup имя группы
+			*/
+			void			setIncrementGroup(const QString & incrementGroup);
+
+			/*! @~russian
+			Возвращает атрибут IncrementGroup.
+			*/
+			const QString	getIncrementGroup() const;
+
+			/*! @~russian
+			Устанавливает функции
+			@param[in] calculation выражение
+			*/
+			void			setCalculation( const QVariant & calculation);
+			
         private:
             QString                 m_className;
-            QVector< QVariant >     m_data;
-
+			QString					m_resetType;
+			QString					m_resetGroup;
+			QString					m_incrementType;
+			QString					m_incrementGroup;
+		 ///						m_calculation;
         };
 
         typedef QSharedPointer< Variable > VariablePtr;
     }
 }
 
-#endif // FIELD_HPP
+#endif // VARIABLE_HPP

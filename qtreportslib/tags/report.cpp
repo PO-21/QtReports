@@ -64,6 +64,20 @@ namespace qtreports
             return m_query;
         }
 
+		void Report::addVariable(const QString & name, const VariablePtr & variable)
+		{
+		}
+
+		const VariablePtr Report::getVariable(const QString & name) const
+		{
+			return VariablePtr();
+		}
+
+		const QMap<QString, VariablePtr> Report::getVariables() const
+		{
+			return QMap<QString, VariablePtr>();
+		}
+
         void    Report::setField( const QString & name, const FieldPtr & field )
         {
             m_fields[ name ] = field;

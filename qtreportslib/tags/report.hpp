@@ -16,6 +16,7 @@
 #include "group.hpp"
 #include "title.hpp"
 #include "detail.hpp"
+#include "variable.hpp"
 
 namespace qtreports {
     namespace detail {
@@ -86,6 +87,23 @@ namespace qtreports {
             Возвращает <queryString>
             */
             const QString                       getQuery() const;
+
+			/*! @~russian
+			Добавляет <variable> в <report>
+			@param[in] name Имя <variable>
+			@param[in] group Указатель на <variable>
+			*/
+			void                                addVariable(const QString & name, const VariablePtr & variable);
+
+			/*! @~russian
+			Возвращает указатель на <group> по имени
+			*/
+			const VariablePtr                      getVariable(const QString & name) const;
+
+			/*! @~russian
+			Возвращает карту указателей на <group>
+			*/
+			const QMap< QString, VariablePtr >     getVariables() const;
 
             /*! @~russian
             Устанавливает <field>

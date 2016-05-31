@@ -11,9 +11,6 @@ namespace qtreports
 
         void    Variable::setClassName( const QString & name )
         {
-            //int id = QMetaType::type( name.toStdString().c_str() );
-            //QMetaType type( id );
-            //return type.isValid();
             m_className = name;
         }
 
@@ -22,20 +19,50 @@ namespace qtreports
             return m_className;
         }
 
-        void Variable::setData( const QVector<QVariant> &data )
-        {
-            m_data = data;
-        }
+		void Variable::setResetType(const QString & resetType)
+		{
+			m_resetType = resetType;
+		}
 
-        QString Variable::getData( int row )
-        {
-            return m_data.value( row ).toString();
-        }
+		const QString Variable::getResetType()
+		{
+			return m_resetType;
+		}
 
-        int Variable::getRowCount()
-        {
-            return m_data.size();
-        }
+		void Variable::setResetGroup(const QString & resetGroup)
+		{
+			m_resetGroup = resetGroup;
+		}
+
+		const QString Variable::getResetGroup()
+		{
+			return m_resetGroup;
+		}
+
+		void Variable::setIncrementType(const QString & incrementType)
+		{
+			m_incrementType = incrementType;
+		}
+
+		const QString Variable::getIncrementType() const
+		{
+			return m_incrementType;
+		}
+
+		void Variable::setIncrementGroup(const QString & incrementGroup)
+		{
+			m_incrementGroup = incrementGroup;
+		}
+
+		const QString Variable::getIncrementGroup() const
+		{
+			return m_incrementGroup;
+		}
+
+		void Variable::setCalculation(const QVariant & calculation)
+		{
+
+		}
 
     }
 }
