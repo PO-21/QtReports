@@ -9,6 +9,16 @@ namespace qtreports
 
         Variable::~Variable() {}
 
+		void Variable::setExpression(const QString & text)
+		{
+			m_expression = text;
+		}
+
+		const QString Variable::getExpression() const
+		{
+			return m_expression;
+		}
+
         void    Variable::setClassName( const QString & name )
         {
             m_className = name;

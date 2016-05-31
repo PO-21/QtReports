@@ -193,6 +193,14 @@ namespace qtreports
                 }
             }
 
+			///variable test
+			if (!m_report->getVariables().isEmpty())
+			{
+				auto keys = m_report->getVariables().keys();
+				auto key = keys[0];
+
+				qDebug() << "variable";
+			}
 			///Group
 			if (!m_report->getGroups().isEmpty())
 			{

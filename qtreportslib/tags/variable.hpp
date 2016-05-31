@@ -25,6 +25,16 @@ namespace qtreports
             Variable();
             ~Variable();
 
+			/*! @~russian
+			Устанавливает <variableExpression>
+			@param[in] text Значение <variableExpression>
+			*/
+			void                                setExpression(const QString & text);
+
+			/*! @~russian
+			Возвращает значение <groupExpression>
+			*/
+			const QString                       getExpression() const;
             /*! @~russian
             Устанавливает атрибут className
             @param[in] name Название класса
@@ -92,6 +102,7 @@ namespace qtreports
 			QString					m_resetGroup;
 			QString					m_incrementType;
 			QString					m_incrementGroup;
+			QString					m_expression;
 		 ///						m_calculation;
         };
 

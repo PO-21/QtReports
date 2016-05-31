@@ -140,6 +140,16 @@ namespace qtreports {
             @param[in] report указатель на объект отчета
             */
             bool    parseField( QXmlStreamReader & reader, const ReportPtr & report );
+			/*! @~russian
+			Парсерит тэг variable
+			@param[in] report указатель на объект отчета
+			*/
+			bool    parseVariable(QXmlStreamReader & reader, const ReportPtr & report);
+			/*! @~russian
+			Парсерит тэг variableExpression
+			@param[in] group указатель на группу, которой принадлежит groupExpression
+			*/
+			bool    parseVariableExpression(QXmlStreamReader & reader, const GroupPtr & variable);
             /*! @~russian
             Парсерит тэг group
             @param[in] report указатель на объект отчета

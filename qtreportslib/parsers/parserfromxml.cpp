@@ -34,6 +34,8 @@ namespace qtreports
             m_functions[ "style" ] = toParseFunc( this, &ParserFromXML::parseStyle );
             m_functions[ "queryString" ] = toParseFunc( this, &ParserFromXML::parseQueryString );
             m_functions[ "field" ] = toParseFunc( this, &ParserFromXML::parseField );
+			m_functions[ "variable" ] = toParseFunc(this, &ParserFromXML::parseVariable);
+			m_functions[ "variableExpression" ] = toParseFunc(this, &ParserFromXML::parseVariableExpression);
             m_functions[ "group" ] = toParseFunc( this, &ParserFromXML::parseGroup );
             m_functions[ "groupExpression" ] = toParseFunc( this, &ParserFromXML::parseGroupExpression );
             m_functions[ "groupHeader" ] = toParseFunc( this, &ParserFromXML::parseGroupHeader );
@@ -519,6 +521,40 @@ namespace qtreports
             return !reader.hasError();
         }
 
+		bool ParserFromXML::parseVariable(QXmlStreamReader & reader, const ReportPtr & report)
+		{
+			QString nameString;
+			if (!getRequiredAttribute(reader, "name", nameString))
+			{
+				return false;
+			}
+
+			VariablePtr variable(new Variable());
+			variable->setTagName("variable");
+			variable->setName(nameString);
+
+			if (!parseChilds(reader, variable))
+			{
+				return false;
+			}
+
+			report->addVariable(nameString, variable);
+
+			return !reader.hasError();
+		}
+
+		bool ParserFromXML::parseVariableExpression(QXmlStreamReader & reader, const GroupPtr & variable)
+		{
+			QString text;
+			if (!getValue(reader, text))
+			{
+				return false;
+			}
+
+			variable->setExpression(text);
+
+			return !reader.hasError();
+		}
         bool	ParserFromXML::parseGroup( QXmlStreamReader & reader, const ReportPtr & report )
         {
             QString nameString;
