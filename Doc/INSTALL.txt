@@ -1,0 +1,59 @@
+Руководство по сборке проекта QtReports 1.0 07/04/2016
+
+Перед началом сборки убедитесь в наличии Qt >= 5.x и CMake >=3.5.х для операционной системы Windows.
+Проверьте правильность установки и наличие путей в PATH/PREFIX_PATH.
+
+1)Скачайте архив с проектом с сайта: https://github.com/PO-21/QtReports
+
+2)Разархивируйте его (Полный путь к папке проекта не должен содержать кириллицы)
+
+3)Сгенерируйте CMakeList для этого в корневой папке проекта(где расположен файл CMakeLists.txt) открыть терминал(командную строку для Windows)
+и выполнить команду:
+
+Для Windows:
+cmake -G "MinGW Makefiles" -B./bin -H./
+
+Для Unix:
+cmake -G "Unix Makefiles" -B./bin -H./
+
+4)Скомпелируйте проект для этого в корневой папке проекта выполните команду:
+
+Windows:
+Запустить команду: mingw32-make -C./bin
+Linux: 
+Запустить команду: make -C ./bin
+
+-------------------------------------------------
+Ошибки:
+
+Windows:
+1)Проверьте правильность установки CMake. Для этого в командной строке введите команду: cmake
+-Если выдаст ошибку: "cmake" не является внутренней или внешней командой, исполняемой программой или исполняемым файлом.
+Тогда ошибка с путями, вы можете попробовать переустановить CMake или решить проблему иным способом.
+-Если выведет информацию о команде, значит путь правильный.
+
+2)Проверьте правильность указания пути к mingw-make в PATH
+При не правильном указании, или вовсе не указании пути будет такая ошибка:
+CMake Error: CMake was unable to find a build program corresponding to "MinGW Makefiles". CMAKE_MAKE_PROGRAM s not set.
+
+Пример: C:\Qt\Qt5.5.1\Tools\mingw492_32\bin
+
+3)При возникновении ошибки "By not providing "FindQt5Widgets.cmake" in CMAKE_MODULE_PATH this project
+has asked CMake to find a package configuration file provided by
+"Qt5Widgets", but CMake did not find one." необходимо добавить в команду блок [CMAKE_PREFIX_PATH="путь к qt"].
+
+Пример для Windows:
+cmake -DCMAKE_PREFIX_PATH="C:\Qt\Qt5.5.1\5.5\mingw492_32"  -G "MinGW Makefiles" -B./bin -H./
+
+Пример для Unix:
+cmake CMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/qt5"  -G "Unix Makefiles" -B./bin -H./
+
+Linux:
+1)Проверьте правильность установки Qt5 пройдете в /usr/lib/x86_64-linux-gnu/qt5/bin ,если же в папке qt5 отсутсвует папка bin, то откройте терминал и ведите sudo apt-get install qt5-default
+
+2) При возникновении ошибки "By not providing "FindQt5Widgets.cmake" in CMAKE_MODULE_PATH this project
+has asked CMake to find a package configuration file provided by
+"Qt5Widgets", but CMake did not find one." необходимо добавить в команду блок [CMAKE_PREFIX_PATH="путь к qt"].
+
+Пример для Unix:
+cmake CMAKE_PREFIX_PATH="/usr/lib/x86_64-linux-gnu/qt5"  -G "Unix Makefiles" -B./bin -H./

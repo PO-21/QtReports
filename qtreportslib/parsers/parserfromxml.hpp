@@ -19,6 +19,7 @@
 #include "tags/rect.hpp"
 #include "tags/ellipse.hpp"
 #include "tags/image.hpp"
+#include "variable.hpp"
 
 namespace qtreports {
     namespace detail {

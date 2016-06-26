@@ -18,11 +18,11 @@
     </groupExpression>
 	
     <groupHeader>
-      <band height="50">
+      <band height="30">
       <staticText>
-        <reportElement x="5" y="20" width="250" height="40"/>
+        <reportElement x="5" y="10" width="250" height="50"/>
 		<textElement textAlignment="Right" textVAlignment="Top" />
-        <text><![CDATA[Подвал!!!!!!!!!Полундра!!!]]></text>
+        <text><![CDATA[Заголовок группы. Группировка по году]]></text>
       </staticText>
       </band>
     </groupHeader>
@@ -30,9 +30,9 @@
 	<groupFooter>
       <band height="30">
       <staticText>
-        <reportElement x="10" y="20" width="250" height="20"/>
+        <reportElement x="5" y="10" width="250" height="20"/>
 		<textElement textAlignment="Right" textVAlignment="Top" />
-        <text><![CDATA[Подвал!!!!!!!!!Полундра!!!]]></text>
+        <text><![CDATA[Подвал группы]]></text>
       </staticText>
       </band>
 	  
@@ -40,27 +40,27 @@
   </group>
   
   <detail>
-    <band height="200">
+    <band height="20">
       
 	  <rectangle>
-        <reportElement x="0" y="0" width="535" height="200" />
+        <reportElement x="0" y="0" width="535" height="20" />
       </rectangle>  
 	  <textField>
-			<reportElement x="10" y="0" width="120" height="200" />
+			<reportElement x="10" y="0" width="120" height="20" />
 			<textFieldExpression class="QInteger"><![CDATA[$F{year}]]></textFieldExpression>
 		</textField>
 			<line>
-        <reportElement x="120" y="0" width="1" height="200" />
+        <reportElement x="120" y="0" width="1" height="20" />
 			</line>     
 	  <textField>
-        <reportElement x="130" y="0" width="140" height="200" />
+        <reportElement x="130" y="0" width="140" height="20" />
         <textFieldExpression class="QString"><![CDATA[$F{name}]]></textFieldExpression>
       </textField>  
 	  <line>
-        <reportElement x="270" y="0" width="1" height="200" />
+        <reportElement x="270" y="0" width="1" height="20" />
       </line>   
 	  <textField>
-        <reportElement x="280" y="0" width="140" height="200" />
+        <reportElement x="280" y="0" width="140" height="20" />
         <textFieldExpression class="QString"><![CDATA[$F{gr}]]></textFieldExpression>
       </textField>
     

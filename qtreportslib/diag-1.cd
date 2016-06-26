@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="qtreports::Engine" Collapsed="true">
+    <Position X="42.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERAAAgBAkQEIAAAQCAgAAAQAAAAAAAARICIEgIAgYI=</HashCode>
+      <FileName>engine.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Ellipse" Collapsed="true">
+    <Position X="19" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>tags\ellipse.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Group" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAGAAAAAAAEACAAAAAABIAAQAAAAAAAAAAAEAUAA=</HashCode>
+      <FileName>tags\group.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Image" Collapsed="true">
+    <Position X="25.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAARAAAAAAAAAAABIAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\image.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Line" Collapsed="true">
+    <Position X="28" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>tags\line.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::QueryString" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAACACBAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>tags\querystring.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Rect" Collapsed="true">
+    <Position X="32.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\rect.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Section" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAQAAAAAAIBBAAAgAAAAAAAAQACAAAAIQIAAAAA=</HashCode>
+      <FileName>tags\section.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::TextField" Collapsed="true">
+    <Position X="21.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>tags\textfield.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::TextWidget" Collapsed="true">
+    <Position X="23.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAgAgACIAAACACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\textwidget.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Variable" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAQAAAAASAgEIgAAAAACAgCACQAAAACgQAIAEAUAI=</HashCode>
+      <FileName>tags\variable.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Band" Collapsed="true">
+    <Position X="30.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAUEAKACCgAogFAFAAEEAAAQAGQAAiIQABAJgCA=</HashCode>
+      <FileName>tags\band.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Detail" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAA=</HashCode>
+      <FileName>tags\detail.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Field" Collapsed="true">
+    <Position X="34.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEQAAAAAAEAAAAAAIAAgAAgAAAAAAAAABAAAAACwAA=</HashCode>
+      <FileName>tags\field.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Object" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAQAAAAAgAAAAAQAAAAAAAABAAAIEAAAAAYA=</HashCode>
+      <FileName>tags\object.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Report" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SALBJEAIJqAQBnyARgcAhgmiIBACUACEMAEJBAJAtEA=</HashCode>
+      <FileName>tags\report.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::StaticText" Collapsed="true">
+    <Position X="23.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\statictext.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Style" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAsIACAAAEmQACAggAEIAFiAAAAICAEAJJAAGIACBgg=</HashCode>
+      <FileName>tags\style.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Title" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\title.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Widget" Collapsed="true">
+    <Position X="25.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAABACQQKgAAggAAAAGQAgCAAAIQAAEKAUAAGBAAAA=</HashCode>
+      <FileName>tags\widget.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::ConverterToHTML" Collapsed="true">
+    <Position X="37.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAAEAAAAgQAAAAAgAAAAAAAAEAAAAAAAAAAAA4A=</HashCode>
+      <FileName>converters\convertertohtml.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::ConverterToPDF" Collapsed="true">
+    <Position X="39" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgABAAAKgAAAAAAAAAAAACABAAAAEAYA=</HashCode>
+      <FileName>converters\convertertopdf.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::ConverterToQWidget" Collapsed="true">
+    <Position X="40.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAsIAAAAgAAgBAAQAAogBDAIQAABAAAAAAABgAEAYA=</HashCode>
+      <FileName>converters\convertertoqwidget.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::Replacer" Collapsed="true">
+    <Position X="37.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgIAAAAAAAAAAAAAAAAAQAAgAAAAQQAAAEAAgAAYA=</HashCode>
+      <FileName>converters\utils\replacer.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="qtreports::detail::ParserFromXML" Collapsed="true">
+    <Position X="44.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBAEAAhFUQgICgAAAQgQAABAwKAgSAAAAgCAAcwe4g=</HashCode>
+      <FileName>parsers\parserfromxml.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="qt_meta_stringdata_qtreports__Engine_t" Collapsed="true">
+    <Position X="37.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_engine.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="qtreports::detail::EllipsePtr" Collapsed="true">
+    <Position X="40.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\ellipse.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::GroupPtr" Collapsed="true">
+    <Position X="44.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\group.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::ImagePtr" Collapsed="true">
+    <Position X="37.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\image.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::LinePtr" Collapsed="true">
+    <Position X="39" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\line.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::QueryStringPtr" Collapsed="true">
+    <Position X="42.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\querystring.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::RectPtr" Collapsed="true">
+    <Position X="37.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\rect.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::SectionPtr" Collapsed="true">
+    <Position X="40.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\section.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::TextFieldPtr" Collapsed="true">
+    <Position X="37.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\textfield.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::TextWidgetPtr" Collapsed="true">
+    <Position X="39" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\textwidget.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::VariablePtr" Collapsed="true">
+    <Position X="42.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\variable.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::BandPtr" Collapsed="true">
+    <Position X="37.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\band.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::DetailPtr" Collapsed="true">
+    <Position X="39" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\detail.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::FieldPtr" Collapsed="true">
+    <Position X="42.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\field.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::ObjectPtr" Collapsed="true">
+    <Position X="40.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\object.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::ReportPtr" Collapsed="true">
+    <Position X="39" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\report.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::StaticTextPtr" Collapsed="true">
+    <Position X="42.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\statictext.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::StylePtr" Collapsed="true">
+    <Position X="44.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\style.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::TitlePtr" Collapsed="true">
+    <Position X="40.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\title.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::detail::WidgetPtr" Collapsed="true">
+    <Position X="44.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tags\widget.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="qtreports::QWidgetPtr" Collapsed="true">
+    <Position X="44.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>converters\convertertoqwidget.hpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

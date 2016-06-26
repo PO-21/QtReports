@@ -24,3 +24,5 @@ Field - 90/10
 fieldDescription - no
 
 image
+
+export - 50/50

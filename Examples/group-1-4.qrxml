@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report name="sample_report" orientation="Landscape">
+  <style name="Arial_Normal" isDefault="true" fontName="Arial"
+    fontSize="12" pdfFontName="c:\tahoma.ttf" pdfEncoding="Cp1251"
+    isPdfEmbedded="false" />
+
+  <queryString>
+    <![CDATA[ select *from group1; ]]>
+  </queryString>
+
+  <field name="name" class="QString" />
+  <field name="gr" class="QString" />
+  <field name="year" class="QInteger" />
+  
+    <title>
+    <band height="55">
+	    <line>
+        <reportElement x="5" y="0" width="1" height="35" />
+        </line>		
+      <staticText>
+        <reportElement x="10" y="10" width="150" height="40" />
+		<textElement textAlignment="Left" textVAlignment="Center" />
+        <text><![CDATA[Заголовок 3 и линии]]></text>
+      </staticText>
+	  
+	  	<line>
+        <reportElement x="155" y="0" width="1" height="35" />
+        </line>
+    </band>
+  </title>
+  
+  <detail>
+    <band height="60">
+	    <rect>
+        <reportElement x="0" y="0" width="535" height="50" />
+        </rect>		
+		  <staticText>
+			<reportElement x="10" y="10" width="250" height="40" />
+			<textElement textAlignment="Right" textVAlignment="Top" />
+			<text><![CDATA[Статичный текст, в теге rectangle]]></text>
+		  </staticText>
+		  
+    </band>
+  </detail>
+
+</report>

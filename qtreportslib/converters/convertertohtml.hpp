@@ -4,6 +4,8 @@
 #include <QString>
 #include "tags/report.hpp"
 
+#include <QDebug>
+
 namespace qtreports {
     namespace detail {
 
@@ -26,6 +28,8 @@ namespace qtreports {
 
             bool        createHTML();
             void        drawShapes(QSharedPointer< Band > band, QString &elementStr, int index);
+
+            QString m_path;
         };
 
     }

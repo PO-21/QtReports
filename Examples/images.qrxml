@@ -7,15 +7,38 @@
   <queryString>
     <![CDATA[ select idImg, nameImg, image from images; ]]>
   </queryString>
+
   <field name="idImg" class="QString" />
   <field name="nameImg" class="QString" />
   <field name="image" class="QString" />
+
+  <group name="nameImg">
+    <groupExpression>
+      <![CDATA[$F{nameImg}]]>
+    </groupExpression>
+    <groupHeader>
+      <band height="40">
+        <textField>
+          <reportElement x="0" y="10" width="50" height="30"/>
+          <textFieldExpression class="QImage"><![CDATA[$F{nameImg}]]></textFieldExpression>
+        </textField>
+      </band>
+    </groupHeader>
+    <groupFooter>
+      <band height="10">
+      </band>
+    </groupFooter>
+  </group>
+  
   <title>
     <band height="35">
       <staticText>
         <reportElement x="10" y="10" width="150" height="20" />
         <text><![CDATA[$P{title}]]></text>
       </staticText>
+      <ellipse>
+        <reportElement x="0" y="0" width="535" height="35" />
+      </ellipse>
     </band>
   </title>
   <detail>
@@ -43,4 +66,5 @@
       </image>
     </band>
   </detail>
+
 </report>

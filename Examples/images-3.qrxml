@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<report name="ImagesAndGraphic" orientation="Landscape">
+  <style name="Arial_Normal" isDefault="true" fontName="Arial" fontColor="Red"
+    fontSize="20" isBold="true" isItalic="true" pdfFontName="c:\tahoma.ttf" pdfEncoding="Cp1251"
+    isPdfEmbedded="false" />
+
+  <queryString>
+    <![CDATA[ select idImg, nameImg, image from images; ]]>
+  </queryString>
+
+  <field name="idImg" class="QString" />
+  <field name="nameImg" class="QString" />
+  <field name="image" class="QString" />
+
+  <group name="nameImg">
+    <groupExpression>
+      <![CDATA[$F{nameImg}]]>
+    </groupExpression>
+    
+	<groupHeader>
+      <band height="40">
+        <textField>
+          <reportElement x="0" y="10" width="50" height="30"/>
+          <textFieldExpression class="QImage"><![CDATA[$F{nameImg}]]></textFieldExpression>
+        </textField>	
+      </band>
+    </groupHeader>
+	
+    <groupFooter>
+      <band height="10">
+	    <staticText>
+			<reportElement x="10" y="10" width="250" height="20" />
+			<text><![CDATA[$P{Подвал 1 2 34 -=!!"№;%:?*()_+Ё/*-}]]></text>
+		</staticText>
+      </band>
+    </groupFooter>
+	
+  </group>
+  
+  <title>
+    <band height="35">
+	
+      <staticText>
+        <reportElement x="20" y="20" width="250" height="20" />
+		<textElement textAlignment="Right" textVAlignment="Top" />
+        <text><![CDATA[$P{i am staticText}]]></text>
+      </staticText>
+	  
+      <ellipse>
+        <reportElement x="0" y="0" width="535" height="35" />
+      </ellipse>
+	  
+    </band>
+  </title>
+  
+  <detail>
+    <band height="200">
+		  
+	  <rect radius="5">
+	  <roundRectangle radius="5" />
+		<reportElement x="0" y="0" width="300" height="200" />
+	  </rect>
+	  
+      <textField>
+        <reportElement x="5" y="0" width="20" height="200" />
+        <textFieldExpression class="QString"><![CDATA[$F{idImg}]]></textFieldExpression>
+      </textField>
+	  
+      <line direction="BottomUp">
+        <reportElement x="25" y="0" width="120" height="1" />
+      </line>
+	  <line direction="BottomUp">
+        <reportElement x="25" y="1" width="120" height="1" />
+      </line>
+	  <line direction="BottomUp">
+        <reportElement x="25" y="3" width="120" height="1" />
+      </line>
+	  <line direction="BottomUp">
+        <reportElement x="25" y="4" width="120" height="1" />
+      </line>
+	  
+      <textField>
+        <reportElement x="40" y="0" width="140" height="200" />
+        <textFieldExpression class="QString"><![CDATA[$F{nameImg}]]></textFieldExpression>
+      </textField>
+	  
+      <line>
+        <reportElement x="180" y="0" width="10" height="200" />
+      </line>
+	  
+    </band>
+  </detail>
+
+</report>

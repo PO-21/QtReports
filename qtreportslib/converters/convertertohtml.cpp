@@ -17,9 +17,27 @@ namespace qtreports {
         }
 
         bool    ConverterToHTML::convert( const QString & path ) {
+
+
+            m_path = path;
+
+            qDebug() << m_path;
+
+            if (path.size() != 0)
+            {
+                while (m_path[m_path.size() - 1] != '\\' && m_path[m_path.size() - 1] != '/' && m_path.size() != 0)
+                {
+                    m_path.remove(m_path.size() - 1, 1);
+                }
+            }
+
             if( !convert() ) {
                 return false;
             }
+
+
+
+            qDebug() << m_path;
 
             QFile file( path );
             file.open(
@@ -362,7 +380,7 @@ namespace qtreports {
             for (auto && image : band->getImages())
             {
                 QImage img = image->getImage();
-                img.save("img" + QString::number(index) + QString::number(imgCount) + ".jpg");
+                img.save(m_path + "img" + QString::number(index) + QString::number(imgCount) + ".jpg");
 
                 elementStr += QString("     <div class='shape' "
                     "style='left: %1px; top: %2px; "

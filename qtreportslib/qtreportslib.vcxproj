@@ -447,6 +447,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <None Include="diag-1.cd" />
     <None Include="qtreportslib.pro" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
